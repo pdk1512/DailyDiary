@@ -21,13 +21,24 @@
 </head>
 <body>
 <div class="main">
-    <img style="width: 30rem; height: 20rem;" src="https://i.pinimg.com/736x/3e/84/09/3e8409dcdd012b4bcda84a710f2d1052.jpg"/>
+    <img style="width: 500px" src="https://images2.imgbox.com/41/62/BWoEBSam_o.png" alt="image host"/>
     <p>Kẹo đáng iu thân mến,</p>
-    <p style="margin-top: 2rem;">Cám ơn cậu vì đã cho tớ biết nỗi lòng của cậu. Đầu tiên cho tớ xin lỗi cậu vì:</p>
+    <p style="margin-top: 2rem;">Cám ơn cậu đáng iu vì đã đồng ý tham gia bủi camping date cuối tuần nì cùng anh</p>
     <p th:text="${emailContent}"></p>
-    <p style="margin-top: 2rem;">Một lần nữa cho tớ xin lỗi cậu vì những sự khó chịu tớ gây ra.</p>
-    <p>Tớ xin ghi nhận và chịu trách nhiệm cho mọi sai lầm của mình.</p>
-    <p>Đây là email tự động. Tớ sẽ liên lạc cậu qua các kênh liên lạc khác ạ.</p>
+    <p style="margin-top: 2rem;">Mọi thứ cho buổi camping sẽ do anh chuẩn bị</p>
+    <p>Từ đồ ăn:
+        <span th:each="food,iterStat : ${foods}">
+            <span th:text="${food}"></span><span th:if="${!iterStat.last}">, </span>
+        </span>
+    </p>
+    <p>Cho tới đồ uống:
+        <span th:each="drink,iterStat : ${drinks}">
+            <span th:text="${drink}"></span><span th:if="${!iterStat.last}">, </span>
+        </span>
+    </p>
+    <p>Kẹo chỉ cần chuẩn bị một tinh thần thoải mái và sức khỏe thật tốt. Còn lại để anh lo.</p>
+    <p>Hi vọng buổi camping date sẽ đem lại cho Kẹo thật nhiều sự đáng yêu.</p>
+    <p>Nếu cậu có ý kiến hay mong muốn nào khác, đừng ngần ngại hãy nhắn tin ngay cho anh hoặc phải hồi lại chiếc meo meo này</p>
     <p style="margin-top: 2rem;">Mãi mê cậu đáng iu,</p>
     <p style="margin-right: 2rem;">Nem</p>
 </div>

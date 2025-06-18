@@ -22,7 +22,8 @@ public class EmailServiceImpl implements EmailService {
         try {
             //Binding email template content
             Context context = new Context();
-            context.setVariable("emailContent", emailDetails.getEmailContent());
+            context.setVariable("foods", emailDetails.getFoods());
+            context.setVariable("drinks", emailDetails.getDrinks());
             String emailContent = templateEngine.process("email-template", context);
 
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();

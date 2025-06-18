@@ -2,12 +2,14 @@ package com.example.DailyDiary.dto;
 
 import lombok.*;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class EmailDetails {
     private String recipient;
-    private String emailContent;
     private String emailSubject;
-    private String emailAttachment;
+    private List<String> foods;
+    private List<String> drinks;
 }
